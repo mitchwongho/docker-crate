@@ -25,11 +25,7 @@ RUN apt-get update
 RUN apt-get install oracle-java7-installer -y
 RUN apt-get install oracle-java7-set-default -y
 
-RUN echo "deb http://ftp.wa.co.za/ubuntu precise universe" > /etc/apt/sources.list
-RUN echo "deb http://ftp.wa.co.za/ubuntu precise-updates universe" >> /etc/apt/sources.list
-RUN echo "deb http://ftp.wa.co.za/ubuntu precise-backports universe" >> /etc/apt/sources.list
-RUN echo "deb http://ftp.wa.co.za/ubuntu precise-security universe" >> /etc/apt/sources.list
-RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
 
 RUN apt-get update
 RUN add-apt-repository ppa:crate/stable
